@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viz - contact</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body{
+            background-color: rgb(230, 224, 224);
+        }
+
+        #left_container{
+            background-color: rgb(244, 244, 244);
+            border-radius: 4px;
+            height: 70%;
+            width:33%;
+            margin: 7% 4% 5% 7%;
+            float: left;
+            padding: 2%;
+        }
+
+        #left_container p{
+            margin: 5% 0 1%;
+        }
+
+        #right_container{
+            background-color: white;
+            height: 70%;
+            border-radius: 4px;
+            width:33%;
+            margin: 7% 7% 5% 4%;
+            float: right;
+            padding: 2%;
+        }
+        #left_container li
+        {
+            margin: 0.5%;
+        }
+
+        .container:hover{
+            transform: scale(1.02);
+            transition: transform 1000ms ease-out; 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="navbar">
+		<ul>
+			<li class="left">
+				<a href="../index.html">Home</a>
+			</li>
+			<li class="left">
+				<a href="./visualiser/linear _regression.html">Visualiser</a>
+			</li>
+			<li class="left">
+				<a href="#">About us</a>
+			</li>
+			<li class="left">
+				<a href="feedback.html">Feedback</a>
+			</li>
+			<li class="left" id="current">
+				<a href="contact.html">Contact us</a>
+			</li>
+			<li class="right">
+				<a href="login.html">Login</a>
+			</li>
+		</ul>
+	</div>
+
+    <div class="container" id="left_container">
+        <h1>CONTACT US</h1>
+        <p>
+            <strong>Email : </strong>
+            <ul style="list-style: none;">
+                <li>karunasagara@student.tce.edu</li>
+                <li>kasinath@student.tce.edu</li>
+                <li>aathanush@student.tce.edu</li>                
+            </ul>         
+        </p>
+        <p>
+            <strong>Phone : </strong>
+            12345 78965
+        </p>
+        <p>
+            <strong>LinkedIn : </strong>
+            <ul style="list-style:none;">
+                <li><a href="#">Karunasagar A</a></li>
+                <li><a href="https://www.linkedin.com/in/kasinath-j-2881a6200/" target="_blank">Kasinath J</a></li>
+                <li><a href="#">Thanush A A</a></li>
+            </ul>
+        </p>
+        <p>
+            <strong>Queries : </strong>
+            <form action="">
+                <textarea style="padding: 1%;" name="queries" id="queries" cols="65" rows="8" placeholder="Write your queries"></textarea>
+                <a style="background-color: rgb(37, 117, 215);color:white;text-decoration:none;padding:1.5%;border-radius:2px;margin:1%;float:right" href="mailto:kasinath@student.tce.edu?cc=aathanush@student.tce.edu, karunasagara@student.tce.edu&subject=Mail for queries in visualiser&body=Link isnt worling">Send Email</a>
+            </form>
+        </p>
+        
+    </div>
+    <div style="width: 3px;height: 77%;border-right:1px black solid;display: inline;float: left;margin:7% 0 0 2%"></div>
+    <div class="container" id="right_container">
+        <!-- <iframe src="./static/map.png" height="100%" width="100%"></iframe> -->
+        <a target="_blank" href="https://www.google.com/maps/place/Thiagarajar+College+of+Engineering/@9.8821321,78.0793642,17z/data=!3m1!4b1!4m5!3m4!1s0x3b00c58f98cfb84d:0x29f51efea3e84bf2!8m2!3d9.8821321!4d78.0815529">
+            <img src="./static/map.png" alt="" height="100%">
+        </a>
+    </div>
+</body>
+</html>

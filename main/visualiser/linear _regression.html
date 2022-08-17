@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viz - Linear regression</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="vis.css">
+    <style>
+        #left_container input[type="text"]
+        {
+            margin-bottom: 1%;
+        }
+        button{
+            background-color: rgb(37, 117, 215);
+            color:white;
+            text-decoration:none;
+            padding:1.5% 3%;
+            border-radius:2px;
+            margin:1%;
+            margin-top:0;
+            float:right;
+            border: none;
+        }
+        .container input[type="text"],.container input[type="radio"]{
+            padding:0.1% 1%;
+            list-style: none;
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+		<ul>
+			<li class="left">
+				<a href="../../index.html">Home</a>
+			</li>
+			<li class="left" id="current">
+				<a href="linear _regression.html">Visualiser</a>
+			</li>
+			<li class="left">
+				<a href="#">About us</a>
+			</li>
+			<li class="left">
+				<a href="../feedback.html">Feedback</a>
+			</li>
+			<li class="left">
+				<a href="../contact.html">Contact us</a>
+			</li>
+			<li class="right">
+				<a href="../login.html">Login</a>
+			</li>
+		</ul>
+	</div>
+
+    <div class="container" id="left_container">
+        <h1>Linear Regression</h1>
+        <p>
+            <strong>Enter values</strong>
+            <br>
+            <strong name="x">x : </strong>
+            <input type="text" id="x">
+            <br>
+            <strong name="y">y : </strong>
+            <input type="text" id="y">
+            <br>
+            <strong name="z">z : </strong>
+            <input type="text" id="z">
+            <br>
+            <button>Insert</button>
+        </p>
+        <p>
+            <strong>Type of Optimizer </strong>
+            <br>
+            <input type="radio" id="Vanilla" name="optimizer" value="Vanilla">
+            <label for="Vanilla">Vanilla</label><br>
+            <input type="radio" id="Momentum" name="optimizer" value="Momentum">
+            <label for="Momentum">Momentum</label><br>
+            <input type="radio" id="Adagrad" name="optimizer" value="Adagrad">
+            <label for="Adagrad">Adagrad</label><br>
+            <input type="radio" id="RMSProp" name="optimizer" value="RMSProp">
+            <label for="RMSProp">RMSProp</label><br>
+            <input type="radio" id="Adam" name="optimizer" value="Adam">
+            <label for="Adam">Adam</label>
+        </p>
+        <p>
+            <strong name="x">Learning Rate : </strong>
+            <input type="text" id="x">
+            <br>
+        </p>
+        <p>
+            <strong>Type of Gradient descent </strong>
+            <br>
+            <input type="radio" id="Batch" name="grad_descent" value="Batch">
+            <label for="Batch">Batch</label><br>
+            <input type="radio" id="Stochastic" name="grad_descent" value="Stochastic">
+            <label for="Stochastic">Stochastic</label><br>
+            <input type="radio" id="Mini_batch" name="grad_descent" value="Mini_batch">
+            <label for="Mini_batch">Mini-batch</label><br>
+        </p>
+        <button >Fit the model</button>
+    </div>
+    <div style="width: 3px;height: 77%;border-right:1px black solid;display: inline;float: left;margin:7% 0 0 2%"></div>
+    <div class="container" id="right_container">
+        <img src="../static/linearreg.gif" width="100%" height="100%">
+        <!-- <iframe src="./static/linearreg.gif" width="100%" height="100%" transform: scale(0.5);></iframe> -->
+    </div>
+    <div style="right:2%;bottom:2%;position:absolute">
+        Wanna learn the maths behind 
+        <a href="exp_linear.html">Click here</a>
+    </div> 
+</body>
+</html>

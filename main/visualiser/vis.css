@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(230, 224, 224);
+}
+
+#left_container{
+    background-color: rgb(244, 244, 244);
+    border-radius: 4px;
+    height: 70%;
+    width:33%;
+    margin: 7% 4% 5% 7%;
+    float: left;
+    padding: 2%;
+}
+
+#left_container p{
+    margin: 5% 0 1%;
+}
+
+#right_container{
+    background-color: white;
+    height: 70%;
+    border-radius: 4px;
+    width:33%;
+    margin: 7% 7% 5% 4%;
+    float: right;
+    padding: 2%;
+}
+#left_container li
+{
+    margin: 0.5%;
+}
+
+.container:hover{
+    transform: scale(1.02);
+    transition: transform 1000ms ease-out; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematical - lr</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="exp.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li class="left">
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="left" id="current">
+                <a href="linear _regression.html">Visualiser</a>
+            </li>
+            <li class="left">
+                <a href="#">About us</a>
+            </li>
+            <li class="left">
+                <a href="../feedback.html">Feedback</a>
+            </li>
+            <li class="left">
+                <a href="../contact.html">Contact us</a>
+            </li>
+            <li class="right">
+                <a href="../login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+    <a href="linear _regression.html" style="position:absolute;top:10%;right: 5%;">Back to Visualiser</a>
+    <h1 style="margin: 7% 0 4%" align="center">
+        Mathematics Behind Linear Regression
+    </h1>
+    <div class="container">
+        <img src="../static/lrsample_plot.png" style="float: right;" alt="">
+        <p>The equation of regression line is represented as:</p>
+        <br>
+        <p><strong>
+            h(x<sub>i</sub>) = &szlig;<sub>0</sub> + &szlig;<sub>1</sub>x<sub>i</sub>
+        </strong></p>
+        <br>
+        <p>Here,</p>
+        <ul>
+            <li>
+                h(x<sub>i</sub>) represents the <strong> predicted response value</strong> for i<sup>th</sup>
+                observation
+            </li>
+            <li>
+                &szlig;<sub>0</sub> and &szlig;<sub>1</sub> are regression
+                coefficients and represent <strong> y-intercept</strong> and <strong>slope</strong> of regression line
+                respectively.
+            </li>
+        </ul>
+        <br> <br>
+        <p>
+            To create our model, we must “learn” or estimate the values of
+            regression coefficients &szlig;<sub>0</sub> and &szlig;<sub>1</sub>. And
+            once we’ve estimated these coefficients, we can use the model to predict
+            responses! 
+            <br> <br>
+            In this article, we are going to use the <strong>principle of Least
+            Squares</strong>. Now consider:
+        </p>
+        <br>
+        <p>
+            y<sub>i</sub> = &szlig;<sub>0</sub> + &szlig;<sub>1</sub>x<sub>i</sub> +
+            &epsilon;<sub>i</sub> &#10153; &epsilon;<sub>i</sub> = y<sub>i</sub> -
+            h(x<sub>i</sub>)
+        </p>
+        <br>
+        <p>
+            Here, &epsilon;<sub>i</sub> is a <strong>residual error</strong> in ith observation. So,
+            our aim is to minimize the total residual error. We define the squared
+            error or cost function, J as:
+        </p>
+        <br>
+        <p>
+            J(&szlig;<sub>0</sub>, &szlig;<sub>1</sub>) = (1/2n)&sum;<sup>n</sup><sub>i=1</sub>
+            &epsilon;<sup>2</sup><sub>i</sub>
+        </p>
+        <br>
+        <p>
+            and our task is to find the value of &szlig;<sub>0</sub> and &szlig;<sub>1</sub>
+            for which J(&szlig;<sub>0</sub>,&szlig;<sub>1</sub>) is minimum! Without
+            going into the mathematical details, we present the result here:
+        </p>
+        <br>
+        <p>&szlig;<sub>1</sub> = SS<sub>xy</sub>/SS<sub>xx</sub></p>
+        <br>
+        <p>
+            &szlig;<sub>0</sub> = y<sub>mean</sub> - &szlig;<sub>1</sub>x<sub>mean</sub>
+        </p>
+        <br>
+        <p>where SS<sub>xy</sub> is the <strong>sum of cross-deviations</strong> of y and x:</p>
+        <p>
+            SS<sub>xy</sub> = &sum;(x<sub>i</sub> - x<sub>mean</sub>)(y<sub>i</sub>
+            - y<sub>mean</sub>)
+        </p>
+        <br>
+        <p>and SS<sub>xx</sub> is the <strong>sum of squared deviations</strong> of x:</p>
+        <p>
+            SS<sub>xx</sub> = &sum;(x<sub>i</sub> - x<sub>mean</sub>)<sup>2</sup>
+        </p>
+    </div>
+</body>
+
+</html>

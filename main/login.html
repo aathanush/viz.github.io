@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Viz - Login</title>
+        <link rel="stylesheet" href="style.css">
+		<style>
+            body{
+                background-image: url("./static/logisticreg.gif");
+				background-color: rgb(249,251,246)	;
+                background-repeat: no-repeat;
+				background-position: left;
+				background-size: 60% 100%;
+				background-attachment: fixed;
+				/* backdrop-filter: blur(3px); */
+            }
+
+			#right-container
+			{
+				backdrop-filter: blur(10px);
+				margin: 8% 6%;
+				width: 30%;
+				height: 75%;
+				border-radius: 10px;
+				float:right;
+			}
+
+			#right-container:hover{
+				transform: scale(1.05);
+				transition: transform 1000ms ease-out; 
+        		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+			.point{
+				padding:2%;
+				margin: 2% 7%;
+				
+			}
+
+			.point input{
+				height: 35px;
+				width: 100%;
+				/* border: rgb(179, 177, 177) 1px solid; */
+				border: none;
+				margin-top: 2%;
+				padding-left: 2%;
+			}
+
+			.point button{
+				width: 83%;
+				height: 30px;
+			}
+
+			input[type=submit]{
+			padding: 1% 0.5%;
+			width: 40%;
+			height: 40px;
+			background-color: #0d6efd;
+			color: white;
+			font-size: large;
+			border: none;
+			border-radius: 3px;
+		}
+
+        </style>
+	</head>
+	<body>
+		<div id="navbar">
+			<ul>
+				<li class="left">
+					<a href="../index.html">Home</a>
+				</li>
+				<li class="left">
+					<a href="./visualiser/linear _regression.html">Visualiser</a>
+				</li>
+				<li class="left">
+					<a href="about us.html">About us</a>
+				</li>
+				<li class="left">
+					<a href="feedback.html">Feedback</a>
+				</li>
+				<li class="left">
+					<a href="contact.html">Contact us</a>
+				</li>
+				<li class="right" id="current">
+					<a href="login.html">Login</a>
+				</li>
+			</ul>
+		</div>
+		
+        <div id="right-container" style="background-color: rgba(0,0,0,0.05);">
+				<img style="margin:5% 40% 0 35%" src="https://imgs.search.brave.com/RMtx5-Nvf6Q0q8lVJLfRnQMDZg3BqGtmaJOuW0qgaTU/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4w/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvdXNlci1waWN0/dXJlcy8xMDAvdW5r/bm93bl8xLTItNTEy/LnBuZw" 
+					height="25%">
+			<form action="">
+				<div class="point" style="font-size: larger">
+					<label>Username : </label>   
+					<br>
+					<input type="text" placeholder=" Enter Username" name="username" required>  
+				</div>
+				<div class="point" style="font-size: larger">
+					<label>Password : </label>   
+					<br>
+					<input type="password" placeholder=" Enter Password" name="password" required>  
+				</div>
+				<center class="point">
+					<input type="submit" style="font-size:medium" value="Login" />
+				</center>
+				<div>
+					<center>
+						<input type="checkbox" checked="checked"> Remember me   
+					</center>
+				</div>
+				<div style="margin: 5% 0 0 8%; ">
+					Forgot <a href="#"> password? </a>   
+				</div>
+			</form>
+		</div>
+		
+	</body>
+</html>	

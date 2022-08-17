@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<title>Viz</title>
+	<link rel="stylesheet" href="./main/style.css">
+	<style>
+		body{
+			background-image: url("./main/static/bg_index.png");
+			color: white;
+		}
+		.left_container{
+			margin: 6% 0 2% 5%;
+			float: left;
+			border-radius: 5px;
+			width: 35%;
+			height: 75%;
+			padding: 2%;
+			backdrop-filter: blur(10px);
+		}
+		.left_container p{
+			margin-top:2%;
+			font-size: large;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar">
+		<ul>
+			<li class="left" id="current">
+				<a href="index.html">Home</a>
+			</li>
+			<li class="left">
+				<a href="./main/visualiser/linear _regression.html">Visualiser</a>
+			</li>
+			<li class="left">
+				<a href="#">About us</a>
+			</li>
+			<li class="left">
+				<a href="./main/feedback.html">Feedback</a>
+			</li>
+			<li class="left">
+				<a href="./main/contact.html">Contact us</a>
+			</li>
+			<li class="right">
+				<a href="./main/login.html">Login</a>
+			</li>
+		</ul>
+	</div >
+	<!-- <img style="margin: 5% 2% 2%;" src="./static/logo.png" alt="logo" width="10%"> -->
+	<!-- <br> -->
+	
+	<div class="left_container">
+		<img  src="./main/static/logo.png" alt="logo">
+		<h3>
+			What is VIZ!!
+		</h3>
+		<p>
+			While developing a Machine learning models , one should understand the basic mathematics behind it , For facilitating that "VIZ", A platform to visualsize the 
+			machine learning models to understand its working and functionalities 
+		</p>
+		<br>
+		<p>
+			Importance of Model visualisation :
+			<br><br>
+			<ul>
+				<li>Debugging the undesirable errors in the model </li>
+				<li>Comparison of models </li>
+				<li>Useful for explaining the models for common user during proposal</li>
+				<li>Easy interpretation of results of projects.</li>
+			</ul>
+			
+		</p>
+	</div>
+	<iframe style="transform: scale(0.8);float:right;margin-top: 4%;" src="./main/carousel.html" frameborder="0" height="90%" width="55%"></iframe>
+</body>
+</html>

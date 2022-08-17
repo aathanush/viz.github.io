@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+	<title>Viz - Feedback</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body{
+			background-image: url("./static/linearreg.gif");
+			background-color: rgb(249,251,246)	;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 80% 100%;
+			background-attachment: fixed;
+		}
+
+		form{
+			margin: 7% 8%;	
+			padding: 0 5% 5% 5%;			
+		}
+
+		fieldset{
+			padding: 2% 2% 2% 2%;
+			margin: 3% 1% 3% 2%;
+			backdrop-filter: blur(6px);
+			border-radius: 5px;
+			border: rgb(179, 177, 177) 1px solid;
+		}
+
+		fieldset:hover{
+			border-left: rgb(55, 115, 234) 10px solid;
+		}
+
+		legend{
+			font-size: large;
+		}
+
+		form input[type=submit]{
+			padding: 1% 0.5%;
+			width: 20%;
+			background-color: #0d6efd;
+			color: white;
+			font-size: large;
+			border: none;
+			border-radius: 3px;
+			margin: 3% 1% 3% 0;
+			float: right;
+		}
+
+		fieldset div{
+			margin-bottom:2% ;
+		}
+
+		form input[type=text]
+		{
+			border: rgb(179, 177, 177) 1px solid;
+			border-radius: 5px;
+			width: 95%;
+			height: 35px;
+			margin-top: 1%;
+			padding-left: 3%;
+			font-size: medium;
+		}
+
+		form input[type=number]
+		{
+			border: rgb(179, 177, 177) 1px solid;
+			border-radius: 5px;
+			text-align: center;
+			width: 20%;
+			height: 35px;
+			font-size: medium;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar">
+		<ul>
+			<li class="left">
+				<a href="../index.html">Home</a>
+			</li>
+			<li class="left">
+				<a href="./visualiser/linear _regression.html">Visualiser</a>
+			</li>
+			<li class="left">
+				<a href="#">About us</a>
+			</li>
+			<li class="left" id="current">
+				<a href="feedback.html">Feedback</a>
+			</li>
+			<li class="left">
+				<a href="contact.html">Contact us</a>
+			</li>
+			<li class="right">
+				<a href="login.html">Login</a>
+			</li>
+		</ul>
+	</div>
+	
+	<form action="#">
+		<fieldset>
+			<em> We are welcomed to receive your queries and feedbacks. It helps us to upgrade the working and interface of the VIZ</em>
+		</fieldset>
+		<fieldset>
+		  <legend>Personal details</legend>
+		
+		  <div>
+			<label for="email"> Email: </label>
+			<br>
+		  	<input name="email" placeholder="example@mail.com" type="text" required="required" />
+		  </div>
+
+		  <div>
+			<label for="name"> Enter your name: </label>
+			<br>
+		  	<input name="name" placeholder=" Your Name" type="text" required="required" />
+		  </div>
+
+		  <div>
+			<label for="gender"> Gender: </label>
+			<br />
+			<br />
+
+			<input id="male" type="radio" name="gender" required="required" />
+			<label for="male">male</label>
+	
+			<input style="margin-left: 2%;" id="female" type="radio" name="gender" required="required" />
+			<label for="female">female</label>
+		  </div>
+		  
+		</fieldset>
+		<fieldset>
+		  <legend>Qualification</legend> 
+			<div>
+				<label id="qualify"> Describe you as: </label>
+				<br />
+				<br />
+				<input id="UG_student" type="radio" name="qualify" required="required" />
+				<label for="UG_student">UG Student</label>
+				
+				<br />
+				<br />
+				<input id="PG_student" type="radio" name="qualify" required="required" />
+				<label for="PG_student">PG student</label>
+				
+				<br />
+				<br />
+				<input id="sde" type="radio" name="qualify" required="required" />
+				<label for="sde">Software Developer</label>
+				
+				<br />
+				<br />
+				<input id="pmanager" type="radio" name="qualify" required="required" />
+				<label for="pmanager">Project Manager</label>
+			</div>
+		  
+			<div style="margin-top: 3%;">
+				<label for="graduation">Year of Graduation : </label>		  
+		  		<input type="number" min="1900" max="2099" step="1" value="2016" />
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Review</legend>
+			<label for="review">Detailed feedback:</label>
+			<br>
+			<textarea style="margin:2% 4% 2% 2%;padding: 2%;" id="review" name="review"
+					rows="5" cols="127" placeholder="Write down your comment here..." ></textarea>
+		</fieldset>
+	
+		<fieldset>
+		  <legend>Ratings</legend>
+		  <label for="rate">Rate the interface of the application</label>
+		  <br>
+		  <input style="width: 90%;margin-top: 2%;" type="range" min="1" max="10" step="1">
+		  <br>
+		  <br>
+		</fieldset>
+		
+		<div style="margin-bottom:3%">
+			<input type="submit" required="required"/>
+		</div>
+		
+	</form>
+	<br>
+</body>
+</html>
