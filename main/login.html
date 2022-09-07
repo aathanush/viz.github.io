@@ -1,119 +1,172 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Viz - Login</title>
-        <link rel="stylesheet" href="style.css">
-		<style>
-            body{
-                background-image: url("./static/logisticreg.gif");
-				background-color: rgb(249,251,246)	;
-                background-repeat: no-repeat;
-				background-position: left;
-				background-size: 60% 100%;
-				background-attachment: fixed;
-				/* backdrop-filter: blur(3px); */
-            }
+  <head>
+    <title>Viz - Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url("./static/logisticreg.gif");
+        background-color: rgb(249, 251, 246);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 60% 100%;
+        background-attachment: fixed;
+        /* backdrop-filter: blur(3px); */
+      }
 
-			#right-container
-			{
-				backdrop-filter: blur(10px);
-				margin: 8% 6%;
-				width: 30%;
-				height: 75%;
-				border-radius: 10px;
-				float:right;
-			}
+      #right-container {
+        backdrop-filter: blur(10px);
+        margin: 8% 6%;
+        width: 30%;
+        height: 75%;
+        border-radius: 10px;
+        float: right;
+      }
 
-			#right-container:hover{
-				transform: scale(1.05);
-				transition: transform 1000ms ease-out; 
-        		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			}
+      #right-container:hover {
+        transform: scale(1.05);
+        transition: transform 1000ms ease-out;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
 
-			.point{
-				padding:2%;
-				margin: 2% 7%;
-				
-			}
+      .point {
+        padding: 2%;
+        margin: 2% 7%;
+      }
 
-			.point input{
-				height: 35px;
-				width: 100%;
-				/* border: rgb(179, 177, 177) 1px solid; */
-				border: none;
-				margin-top: 2%;
-				padding-left: 2%;
-			}
+      .point input {
+        height: 35px;
+        width: 100%;
+        /* border: rgb(179, 177, 177) 1px solid; */
+        border: none;
+        margin-top: 2%;
+        padding-left: 2%;
+      }
 
-			.point button{
-				width: 83%;
-				height: 30px;
-			}
+      .point button {
+        width: 83%;
+        height: 30px;
+      }
 
-			input[type=submit]{
-			padding: 1% 0.5%;
-			width: 40%;
-			height: 40px;
-			background-color: #0d6efd;
-			color: white;
-			font-size: large;
-			border: none;
-			border-radius: 3px;
-		}
+      #final_submit {
+        padding: 1% 0.5%;
+        width: 40%;
+        height: 40px;
+        background-color: #0d6efd;
+        color: white;
+        font-size: large;
+        border: none;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body onload="createCaptcha()">
+    <div id="navbar">
+      <ul>
+        <li class="left">
+          <a href="../index.html">Home</a>
+        </li>
+        <li class="left">
+          <a href="./visualiser/linear _regression.html">Visualiser</a>
+        </li>
+        <li class="left">
+          <a href="about us.html">About us</a>
+        </li>
+        <li class="left">
+          <a href="feedback.html">Feedback</a>
+        </li>
+        <li class="left">
+          <a href="contact.html">Contact us</a>
+        </li>
+        <li class="right" id="current">
+          <a href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
 
-        </style>
-	</head>
-	<body>
-		<div id="navbar">
-			<ul>
-				<li class="left">
-					<a href="../index.html">Home</a>
-				</li>
-				<li class="left">
-					<a href="./visualiser/linear _regression.html">Visualiser</a>
-				</li>
-				<li class="left">
-					<a href="about us.html">About us</a>
-				</li>
-				<li class="left">
-					<a href="feedback.html">Feedback</a>
-				</li>
-				<li class="left">
-					<a href="contact.html">Contact us</a>
-				</li>
-				<li class="right" id="current">
-					<a href="login.html">Login</a>
-				</li>
-			</ul>
-		</div>
-		
-        <div id="right-container" style="background-color: rgba(0,0,0,0.05);">
-				<img style="margin:5% 40% 0 35%" src="https://imgs.search.brave.com/RMtx5-Nvf6Q0q8lVJLfRnQMDZg3BqGtmaJOuW0qgaTU/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4w/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvdXNlci1waWN0/dXJlcy8xMDAvdW5r/bm93bl8xLTItNTEy/LnBuZw" 
-					height="25%">
-			<form action="">
-				<div class="point" style="font-size: larger">
-					<label>Username : </label>   
-					<br>
-					<input type="text" placeholder=" Enter Username" name="username" required>  
-				</div>
-				<div class="point" style="font-size: larger">
-					<label>Password : </label>   
-					<br>
-					<input type="password" placeholder=" Enter Password" name="password" required>  
-				</div>
-				<center class="point">
-					<input type="submit" style="font-size:medium" value="Login" />
-				</center>
-				<div>
-					<center>
-						<input type="checkbox" checked="checked"> Remember me   
-					</center>
-				</div>
-				<div style="margin: 5% 0 0 8%; ">
-					Forgot <a href="#"> password? </a>   
-				</div>
+    <div id="right-container" style="background-color: rgba(0, 0, 0, 0.05)">
+      <img
+        style="margin: 5% 40% 0 35%"
+        src="https://imgs.search.brave.com/RMtx5-Nvf6Q0q8lVJLfRnQMDZg3BqGtmaJOuW0qgaTU/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4w/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvdXNlci1waWN0/dXJlcy8xMDAvdW5r/bm93bl8xLTItNTEy/LnBuZw"
+        height="25%"
+      />
+      <form action="">
+        <div class="point" style="font-size: larger">
+          <label>Username : </label>
+          <br />
+          <input
+            type="text"
+            placeholder=" Enter Username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="point" style="font-size: larger">
+          <label>Password : </label>
+          <br />
+          <input
+            type="password"
+            placeholder=" Enter Password"
+            name="password"
+            required
+          />
+        </div>
+
+		<div class="point">
+			<form id="captcha_container">
+			<div>
+				<span float="left" id="captcha" style="padding: 0;margin: 0 ;"></span>
+				<button style="width:30%;display: inline;margin: 1% 0 0;padding: 0;float: right;";	 
+				type="submit" onclick="validateCaptcha()">Submit</button>
+				<input style="width:30%;display: inline;margin: 1% 5%;padding: 0;float: right;";	
+				type="text" placeholder="Captcha" id="captchaTextBox"/>
+			</div>	
 			</form>
 		</div>
-		
-	</body>
-</html>	
+
+        <center class="point">
+          <input type="submit" style="font-size: medium;margin-top: 0; " value="Login" id="final_submit"/>
+        </center>
+        <div style="margin: 5% 0 0 8%">Forgot <a href="#"> password? </a></div>
+      </form>
+    </div>
+
+    <script>
+      var code;
+      function createCaptcha() {
+        document.getElementById("captcha").innerHTML = "";
+        var charsArray =
+          "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+        var lengthOtp = 6;
+        var captcha = [];
+        for (var i = 0; i < lengthOtp; i++) {
+          //below code will not allow Repetition of Characters
+          var index = Math.floor(Math.random() * charsArray.length + 1); 
+          if (captcha.indexOf(charsArray[index]) == -1)
+            captcha.push(charsArray[index]);
+          else i--;
+        }
+        var canv = document.createElement("canvas");
+        canv.id = "captcha";
+        canv.width = 100;
+        canv.height = 50;
+        var ctx = canv.getContext("2d");
+        ctx.font = "25px Georgia";
+        ctx.strokeText(captcha.join(""), 0, 30);
+        code = captcha.join("");
+        document.getElementById("captcha").appendChild(canv); 
+      }
+      function validateCaptcha() {
+        event.preventDefault();
+        debugger;
+        if (document.getElementById("captchaTextBox").value == code) {
+          alert("Valid Captcha");
+        } else {
+          alert("Invalid Captcha. try Again");
+          createCaptcha();
+        }
+      }
+    </script>
+  </body>
+</html>
