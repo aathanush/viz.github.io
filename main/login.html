@@ -61,7 +61,7 @@
       }
     </style>
   </head>
-  <body onload="createCaptcha()">
+  <body >
     <div id="navbar">
       <ul>
         <li class="left">
@@ -138,11 +138,11 @@
         document.getElementById("captcha").innerHTML = "";
         var charsArray =
           "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
-        var lengthOtp = 6;
+        var lengthOtp = 7;
         var captcha = [];
         for (var i = 0; i < lengthOtp; i++) {
           //below code will not allow Repetition of Characters
-          var index = Math.floor(Math.random() * charsArray.length + 1); 
+          var index = Math.floor(Math.random() * charsArray.length); 
           if (captcha.indexOf(charsArray[index]) == -1)
             captcha.push(charsArray[index]);
           else i--;
@@ -158,8 +158,8 @@
         document.getElementById("captcha").appendChild(canv); 
       }
       function validateCaptcha() {
-        event.preventDefault();
-        debugger;
+        // event.preventDefault();
+        // debugger;
         if (document.getElementById("captchaTextBox").value == code) {
           alert("Valid Captcha");
         } else {
@@ -167,6 +167,7 @@
           createCaptcha();
         }
       }
+      createCaptcha()
     </script>
   </body>
 </html>
